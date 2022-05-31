@@ -1,0 +1,32 @@
+.light {
+    --theme-color-green: #2fd371;
+    --theme-color-red: #d32f2f;
+    --theme-color-blue: #304ffe;
+    --theme-color-gold: #ffad42;
+    --theme-page-background: #fff;
+    --theme-page-background-card: #fff;
+    --theme-page-background-dark: #ececec;
+    --theme-page-line-color: rgba(196, 196, 196, 0.40);
+    --theme-page-text: #111;
+    --theme-page-text-light: #262626;
+    --theme-page-text-lighter: #545454;
+    --theme-page-stroke: rgba(38, 38, 38, 0.87);
+    --theme-page-image-filter-invert: invert(0);
+
+}
+
+.dark {
+    --theme-color-green: #82e5a5;
+    --theme-color-red: #e58282;
+    --theme-color-blue: #536dfe;
+    --theme-color-gold: #ffad42;
+    --theme-page-background: #1f1f1f;
+    --theme-page-background-card: #000;
+    --theme-page-background-dark: #363636;
+    --theme-page-line-color: rgba(93, 93, 93, 0.40);
+    --theme-page-text: #fff;
+    --theme-page-text-light: #989898;
+    --theme-page-text-lighter: #707070;
+    --theme-page-stroke: rgba(222, 222, 222, 0.87);
+    --theme-page-image-filter-invert: invert(1);
+}

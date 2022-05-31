@@ -1,0 +1,55 @@
+@import url(theme.scss);
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--theme-page-background);
+  background-color: var(--theme-page-background);
+  color: var(--theme-page-text);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.bottomFrame{
+  height: 22vw;
+  width: 100vw;
+}
+@media (min-width: 576px) {
+  .bottomFrame{
+    height: 12vh;
+    width: 60vw;
+  }
+}
+
+.card-1 {
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-1:hover {
+  border-radius: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-box {
+  box-shadow: 0 6px 28px rgba(82, 87, 104, 0.1), 0 -6px 28px rgba(82, 87, 104, 0.1);
+}
+
+.card-bottom {
+  box-shadow: 0 6px 28px rgba(82, 87, 104, 0.1);
+}
+
+.card-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
