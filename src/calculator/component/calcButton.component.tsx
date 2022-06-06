@@ -2,14 +2,16 @@ import {FC} from "react";
 
 interface ButtonProps{
     text:string,
-    onClick:any
+    onClick:any,
+    colored?:boolean,
+    bold?:boolean,
 }
 
 export const CalcButtonComponent: FC<ButtonProps> = (props) => {
     return(
         <div className="ratio ratio-1x1 align-items-center justify-content-center m-2" onClick={props.onClick}>
             <div className="d-flex card-1 text-center align-items-center justify-content-center" >
-                <div className="fs-4 fw-bold">
+                <div className={`fs-4 text-black ${props.bold?"fw-bold":""} ${props.colored?"orangeColor":""}`}>
                     {props.text}
                 </div>
             </div>

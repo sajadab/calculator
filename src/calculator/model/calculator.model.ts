@@ -4,4 +4,6 @@ export interface LastStackModel{
     isSecondActuator:boolean,
     isLeftParentheses:boolean,
     isRightParentheses:boolean,
+    isTriangular:boolean,
+    name:string,
 }
