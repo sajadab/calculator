@@ -17,6 +17,11 @@
   width: 100%;
 }
 
+.mText {
+  user-select: none;
+  color: var(--theme-page-text)!important;
+}
+
 .sideFrame{
   width: 100vw;
 }
@@ -24,6 +29,28 @@
   .sideFrame{
     width: 60vw;
   }
+}
+
+.fade-enter {
+  max-width: 0;
+  opacity: 0;
+}
+
+.fade-enter-active {
+  max-width: 11vh;
+  opacity: 1;
+  transition: all 400ms;
+}
+
+.fade-exit {
+  max-width: 11vh;
+  opacity: 1;
+}
+
+.fade-exit-active {
+  max-width: 0;
+  opacity: 0;
+  transition: all 400ms;
 }
 
 .orangeColor{
