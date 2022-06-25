@@ -228,16 +228,16 @@ export const Calculator: FC = () => {
 
     return (
         <div className={`App ${darkMode ? THEME_DARK : THEME_LIGHT}`}>
-            {darkMode ?
-                <WbSunnyIcon className="position-absolute top-0 end-0" fontSize={"large"}
-                             onClick={() => changeDarkMode(false)}/>
-                :
-                <NightsStayIcon className="position-absolute top-0 end-0" fontSize={"large"}
-                                onClick={() => changeDarkMode(true)}/>
-            }
             <div
                 className="d-flex flex-column w-100 position-fixed fixed-bottom align-items-center justify-content-center">
-                <div className="d-flex flex-column sideFrame">
+                <div className="d-flex flex-column sideFrame position-relative">
+                    {darkMode ?
+                        <WbSunnyIcon className="position-absolute top-0 end-0" fontSize={"large"}
+                                     onClick={() => changeDarkMode(false)}/>
+                        :
+                        <NightsStayIcon className="position-absolute top-0 end-0" fontSize={"large"}
+                                        onClick={() => changeDarkMode(true)}/>
+                    }
                     <div className="w-100 d-flex flex-column container-md">
                         <div className="w-100 fs-4 ps-2 pe-2 pb-2 mText">{resultText}</div>
                         <TextareaAutosize ref={stackRef} value={stackText}
