@@ -1,6 +1,5 @@
 import React, {FC, useEffect} from "react";
 import {THEME_DARK, THEME_LIGHT} from "./CONSTANTS";
-import './style/App.scss'
 import {CalcButtonComponent} from "./component/calcButton.component";
 
 import {create, all} from 'mathjs'
@@ -24,12 +23,13 @@ import {
     removeLastCharWithIndex
 } from "./calculator.utils";
 import {getDarkMode, saveDarkMode} from "./calculator.storage";
+import {NextPage} from "next";
 
 
-export const Calculator: FC = () => {
+const Calculator: NextPage = () => {
 
     const math: any = create(all)
-    const [darkMode, setDarkMode] = React.useState<boolean>(getDarkMode());
+    const [darkMode, setDarkMode] = React.useState<boolean>();
     const [isLastTriangle, setLastTriangle] = React.useState(false);
     const [lastStack, setLastStack] = React.useState<LastStackModel>();
     const [leftParenthesesCount, setLeftParenthesesCount] = React.useState(0);
@@ -42,6 +42,7 @@ export const Calculator: FC = () => {
     const stackRef = React.useRef<HTMLTextAreaElement>(null);
 
     useEffect(() => {
+        setDarkMode(getDarkMode())
         handleResult();
     }, [stackText])
 
@@ -240,7 +241,7 @@ export const Calculator: FC = () => {
                     }
                     <div className="w-100 d-flex flex-column container-md">
                         <div className="w-100 fs-4 ps-2 pe-2 pb-2 mText">{resultText}</div>
-                        <TextareaAutosize ref={stackRef} value={stackText}
+                        <TextareaAutosize ref={stackRef} value={stackText} aria-label={"result"}
                                           className="w-100 mb-2 ps-2 pe-2 text-start d-flex stackText fs-5 textarea mText"
                                           onChange={onChangeTitle} onFocus={()=>setStackFocused(true)}/>
                     </div>
@@ -398,3 +399,5 @@ export const Calculator: FC = () => {
         </div>
     )
 }
+
+export default Calculator

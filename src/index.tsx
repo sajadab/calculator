@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import {Calculator} from "./calculator/calculator";
+import Calculator from "./pages/calculator";
 
 ReactDOM.render(
   <React.StrictMode>
